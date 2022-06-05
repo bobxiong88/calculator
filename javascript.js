@@ -45,7 +45,7 @@ let oped = false;
 let eqed = false;
 let error = false;
 
-let operators = "+-*÷^%m";
+let operators = "+-*÷^%";
 let digits = "0123456789."
 
 let n = 20;
@@ -100,6 +100,20 @@ buttons.forEach((button)=>{
                 }
                 eqed = true;
             }
+        }
+        else if (char==="(+-)"){
+            if (eqed ===true){
+                prevNumber = "";
+                displayText = "";
+                eqed = false;
+            }
+            else if (oped===true){
+                prevNumber = displayText;
+                displayText = "";
+                oped = false;
+            }
+            if (displayText!==""&&displayText[0]=="-") displayText = displayText.slice(1);
+            else displayText = "-"+displayText;
         }
         if (displayText.length>20){
             displayText = "ERROR";
