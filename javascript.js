@@ -8,6 +8,10 @@ function multiply(a, b){
     return a*b;
 }
 function divide(a, b){
+    if (b === 0){
+        error = true;
+        return "ZERO DIVISION";
+    }
     return a/b;
 }
 function pow(a, b){
