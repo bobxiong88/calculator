@@ -1,4 +1,4 @@
-body{
+*{
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -21,6 +21,7 @@ body{
     padding: 2px;
     height: 64px;
     margin-bottom: 10px;
+    font-size:20px;
 }
 
 #buttons{
